@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PaginationComponent } from './features/pagination/pagination/pagination.component';
 
 @Component({
   selector: 'app-root',
