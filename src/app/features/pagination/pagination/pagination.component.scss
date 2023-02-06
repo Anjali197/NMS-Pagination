@@ -1,10 +1,86 @@
 .mainContainer{
+    padding: 36px 15px;
+   
 
     .pagination{
 
         .dropdownsHeader{
             display: flex;
             justify-content: space-between;
+            gap: 10px;
+        }
+
+        .headingList{
+            ul{
+
+                display: flex;
+                list-style: none;
+                justify-content: space-between;
+                padding: 40px 127px 0px 20px;
+                font-size: 18px;
+                 color: #878787;
+                font-weight: 700;
+                font-family: "roboto",sans-serif;
+                
+            }
+
+           
         }
     }
+}
+
+// ng:deep
+
+::ng-deep{
+
+    .p-input-icon-left > .p-inputtext {
+    padding-left: 2.5rem;
+    width: 327px;
+    height: 36px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 2px solid #ECECEC;
+    }
+
+    .p-dropdown {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 138px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;
+    border-radius: 6px;
+    align-items: center;
+    text-align: center;
+    }
+
+    .p-dropdown .p-dropdown-label.p-placeholder {
+        color: #6c757d;
+        font-size: 14px;
+        font-family: "roboto",sans-serif;
+        color: #606060;
+    }
+
+    .p-button {
+        width: 139px;
+        height: 36px;
+        background: #3BBCA0;
+        box-shadow: 0px 4px 24px rgb(0 0 0 / 5%);
+        border-radius: 5px;
+    }
+
+    .p-button .p-button-label {
+        transition-duration: 0.2s;
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: "Inter",sans-serif;
+    }
+
+
 }
