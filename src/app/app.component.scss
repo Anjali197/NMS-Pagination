@@ -1,6 +1,21 @@
 .mainContainer{
 
     display: flex;
+    .sidebar{
+        width:18%;
+    }
+    
+    .header-body{
+        width: calc(100% - 18%);
+        // height: 20px;
+        .header{
+          
+            height: 10%;
+            background-color: aqua;
+        }
+
+    }
+
     
 
     
