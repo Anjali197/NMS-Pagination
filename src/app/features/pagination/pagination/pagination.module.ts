@@ -5,7 +5,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginationRoutingModule } from './pagination-routing.module';
-// import {ButtonModule} from 'primeng/button';
+
 
 
 
@@ -20,7 +20,7 @@ import { PaginationRoutingModule } from './pagination-routing.module';
     InputTextModule,
     FormsModule,
     PaginationRoutingModule,
-    // ButtonModule
+   
 
   ]
 })

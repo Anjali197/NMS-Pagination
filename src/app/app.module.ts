@@ -20,7 +20,9 @@ import {DropdownModule} from 'primeng/dropdown';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonModule,InputTextModule,DropdownModule
+    ButtonModule,
+    InputTextModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
