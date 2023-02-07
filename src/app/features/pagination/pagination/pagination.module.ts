@@ -20,7 +20,7 @@ import { PaginationRoutingModule } from './pagination-routing.module';
     InputTextModule,
     FormsModule,
     PaginationRoutingModule,
-   
+    
 
   ]
 })

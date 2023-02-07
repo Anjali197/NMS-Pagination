@@ -9,6 +9,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {DropdownModule} from 'primeng/dropdown';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {DropdownModule} from 'primeng/dropdown';
     AppRoutingModule,
     ButtonModule,
     InputTextModule,
-    DropdownModule
+    DropdownModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

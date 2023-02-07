@@ -28,10 +28,20 @@
 
         </div>
 
-        <div class="pageCards">
+      
 
-           <span></span>
+            <div class="pageCards" *ngFor="let item of usersList">
+                <p>{{item.email}}</p>
+                <p>{{item.employeeCode}}</p>
+                <p>{{item.mobile}}</p>
+                <p>{{item.name}}</p>
+                <div >
+                    <p >{{ item.project[0].project}} {{item.project.length-1}}</p>
+                 </div>
+            
+            </div>
 
-        </div>
+          
+
     </div>
 </div>
