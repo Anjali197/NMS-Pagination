@@ -1,10 +1,14 @@
 .mainContainer{
 
     display: flex;
-    background: #FAFAFA;
+    background:#FAFAFA;
 
     .sidebar{
         width:18%;
+        height: 100vh;
+ 
+    background-color: aquamarine;
+
     }
     
     .header-body{

@@ -11,7 +11,7 @@ export class PaginationComponent {
   usersList: IUserDetails[] = [];
   projectList: IProject[] = [];
   pageNumber = 0;
-  pageSize = 20;
+  pageSize = 10;
   totalPages = 0;
 
   constructor(private getApi: ApiCallService) {}
@@ -25,7 +25,7 @@ export class PaginationComponent {
       .getAllUsers(this.pageNumber, this.pageSize)
       .subscribe((response) => {
         this.usersList = response.users;
-        this.pageNumber = response.pageNumber + 1;
+        this.pageNumber = response.pageNumber ;
         this.totalPages = response.totalPage;
         this.projectList = this.usersList[0].project;
       });
@@ -38,4 +38,15 @@ export class PaginationComponent {
   sample(project:any){
     
   }
+  
+  pagination(e:any){
+    console.log(e);
+    console.log(e.page);
+    this.pageNumber= e.page;
+    this.getUsers();
+    
+
+  }
+
+  
 }

@@ -1,47 +1,63 @@
 <div class="mainContainer">
+  <div class="pagination">
+    <div class="dropdownsHeader">
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText placeholder="Search" />
+      </span>
+      <p-dropdown placeholder="Departments"></p-dropdown>
+      <p-dropdown placeholder="Projects"></p-dropdown>
+      <p-dropdown placeholder="Manager"></p-dropdown>
+      <p-dropdown placeholder="Current"></p-dropdown>
+      <button pButton type="button" label="Add Employee"></button>
+    </div>
 
-    <div class="pagination">
-
-        <div class="dropdownsHeader">
-
-            <span class="p-input-icon-left">
-                <i class="pi pi-search"></i>
-                <input type="text" pInputText  placeholder="Search">         
-            </span>
-            <p-dropdown placeholder="Departments" ></p-dropdown>
-            <p-dropdown placeholder="Projects" ></p-dropdown>
-            <p-dropdown placeholder="Manager" ></p-dropdown>
-            <p-dropdown placeholder="Current" ></p-dropdown>
-            <button pButton type="button" label="Add Employee" ></button>
-         </div>
-
-        <div class="headingList">
-
-            <ul>
-                <li>Employee</li>
-                <li>E-mail</li>
-                <li>Mobile No</li>
-                <li>Employee Code</li>
-                <li>Project</li>
-                
-              </ul>
-
+    <div class="headingList">
+      <ul>
+        <div class="employee-sort">
+          <li>Employee</li>
+          <img src="/assets/images/Vector (1).svg" alt="" />
         </div>
 
-      
+        <li>E-mail</li>
+        <li>Mobile No</li>
 
-            <div class="pageCards" *ngFor="let item of usersList">
-                <p>{{item.email}}</p>
-                <p>{{item.employeeCode}}</p>
-                <p>{{item.mobile}}</p>
-                <p>{{item.name}}</p>
-                <div >
-                    <p >{{ item.project[0].project}} {{item.project.length-1}}</p>
-                 </div>
-            
-            </div>
-
-          
-
+        <div class="employee-sort">
+          <li>Employee Code</li>
+          <img src="/assets/images/Vector (1).svg" alt="" />
+        </div>
+        <li>Project</li>
+      </ul>
     </div>
+
+    <div class="pageCards" *ngFor="let item of usersList">
+      <div class="employee">
+        <img src="/assets/images/john doe.svg" alt="" />
+        <p>{{ item.name }}</p>
+      </div>
+      <div class="email">
+        <p>{{ item.email }}</p>
+      </div>
+      <div class="mobile">
+        <p>{{ item.mobile }}</p>
+      </div>
+      <div class="employee-code">
+        <p>{{ item.employeeCode }}</p>
+      </div>
+      <div class="project">
+        <p>{{ item.project[0].project }}</p>
+        <p *ngIf="item.project.length - 1 > 0">
+          +{{ item.project.length - 1 }}
+        </p>
+      </div>
+      <img src="/assets/images/Group 85.svg" alt="" />
+    </div>
+
+    <p-paginator
+      [rows]="10"
+      [totalRecords]="pageSize * totalPages"
+      [rowsPerPageOptions]="[10, 20, 30]"
+      (onPageChange)="pagination($event)"
+    ></p-paginator>
+  </div>
 </div>

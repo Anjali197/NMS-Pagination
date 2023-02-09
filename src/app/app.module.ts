@@ -10,7 +10,8 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {DropdownModule} from 'primeng/dropdown';
 import { HttpClientModule } from '@angular/common/http';
-
+import {PaginatorModule} from 'primeng/paginator';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonModule,
     InputTextModule,
     DropdownModule,
-    HttpClientModule
+    HttpClientModule,PaginatorModule,BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
