@@ -1,13 +1,37 @@
 .mainContainer {
   padding: 36px 15px;
-  background-color: #FAFAFA;
-  
+  // overflow: hidden;
   .pagination {
-    background-color: #FAFAFA;
     .dropdownsHeader {
       display: flex;
       justify-content: space-between;
       gap: 10px;
+
+      .dropdowns{
+        ::ng-deep{
+          .p-dropdown {
+            width: 108px;
+          }
+          .p-dropdown-label {
+    
+            text-overflow: clip;
+          
+        }
+          
+        }
+      }
+
+
+      .department-dropdown{
+        ::ng-deep{
+          .p-dropdown-label {
+    
+            text-overflow: clip;
+          
+        }
+
+        }
+      }
     }
 
     .headingList {
@@ -26,36 +50,63 @@
         }
       }
     }
+    .pagecards-container {
+      overflow: auto;
+      height: 600px;
+      width: 101%;
 
-    .pageCards {
-      display: flex;
-      justify-content: space-between;
-      background-color: #FFFFFF !important; 
-      padding: 20px;
-      height: 50px;
-      margin-bottom: 10px;
+      // background-color:#D2D2D2;
 
-      // justify-content: space-between;
-      .employee,
-      .mobile,
-      .project,
-      .empolee-code,
-      .email {
-        width: 200px;
-        background-color: #ffffff;
-      }
-
-      p {
-        margin-bottom: 20px;
-      }
-      .employee {
+      .pageCards {
         display: flex;
+        justify-content: space-between;
+        background-color: #ffffff !important;
+        padding: 20px;
+        height: 80px;
+        margin-bottom: 15px;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        // gap: 50px;
+        justify-content: space-between;
         align-items: center;
-        gap: 20px;
-      }
-      .project {
-        display: flex;
-        gap: 10px;
+        .employee,
+        .mobile,
+        .project,
+        .employee-code,
+        .email,.edit-btn {
+          width: 700px;
+          background-color: #ffffff;
+
+        }
+
+        p {
+          cursor: pointer;
+        }
+        .employee {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+        .project {
+          display: flex;
+          gap: 10px;
+        }
+        #edit-image {
+          width: 20px;
+        }
+        .employee{
+           font-size: 16px;
+           font-weight: 700;
+           font-family: "railway",sans-serif;
+        }
+        .mobile,
+        .project,
+        .employee-code,
+        .email{
+          font-size: 16px;
+          font-weight: 400;
+          font-family: "roboto",sans-serif;
+        }
       }
     }
   }
@@ -93,6 +144,8 @@
     font-size: 14px;
     font-family: "roboto", sans-serif;
     color: #606060;
+    text-overflow: none;
+
   }
 
   .p-button {
@@ -112,4 +165,31 @@
     line-height: 20px;
     font-family: "Inter", sans-serif;
   }
+  .p-dropdown .p-dropdown-trigger {
+  
+    width: 35px;
+  
+}
+.p-button {
+border: #3bbca0;
+}
+.p-button:enabled:hover {
+  background: #3bbca0; 
+  color: #ffffff;
+   border-color: none; 
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+   background: white;
+  border-color: white; 
+  color: #3bbca0; 
+}
+.p-link:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #3bbca0;
+}
+.p-paginator .p-paginator-pages .p-paginator-page {
+  border-radius: 2px;
+  
+}
 }

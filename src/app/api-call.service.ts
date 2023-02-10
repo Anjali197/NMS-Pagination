@@ -11,14 +11,14 @@ export class ApiCallService {
   constructor( private http:HttpClient) { }
   url='http://164.52.200.24:6204/users/get-all'
 
-getAllUsers(pageNumber:number,pageSize:number){
+getAllUsers(pageNumber:number,pageSize:number, sortOrder:string , sortProperty:string){
   const data={
     "headers":{
 
       "pageNumber":pageNumber,
       "pageSize":pageSize,
-      "sortOrder":"desc",
-      "sortProperty":"employeeCode"
+      "sortOrder": sortOrder,
+      "sortProperty":sortProperty
   }
 }
   return this.http.post<IUserDetailsResponse>(this.url,data)

@@ -12,6 +12,7 @@ import {DropdownModule} from 'primeng/dropdown';
 import { HttpClientModule } from '@angular/common/http';
 import {PaginatorModule} from 'primeng/paginator';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { TooltipModule } from 'primeng/tooltip';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ButtonModule,
     InputTextModule,
     DropdownModule,
-    HttpClientModule,PaginatorModule,BrowserAnimationsModule
+    HttpClientModule,PaginatorModule,BrowserAnimationsModule,TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

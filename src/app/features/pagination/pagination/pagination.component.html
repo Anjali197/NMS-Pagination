@@ -5,10 +5,10 @@
         <i class="pi pi-search"></i>
         <input type="text" pInputText placeholder="Search" />
       </span>
-      <p-dropdown placeholder="Departments"></p-dropdown>
-      <p-dropdown placeholder="Projects"></p-dropdown>
-      <p-dropdown placeholder="Manager"></p-dropdown>
-      <p-dropdown placeholder="Current"></p-dropdown>
+      <p-dropdown class="department-dropdown" placeholder="Departments"></p-dropdown>
+      <p-dropdown class="dropdowns" placeholder="Projects"></p-dropdown>
+      <p-dropdown  class="dropdowns" placeholder="Manager"></p-dropdown>
+      <p-dropdown class="dropdowns" placeholder="Current"></p-dropdown>
       <button pButton type="button" label="Add Employee"></button>
     </div>
 
@@ -16,7 +16,7 @@
       <ul>
         <div class="employee-sort">
           <li>Employee</li>
-          <img src="/assets/images/Vector (1).svg" alt="" />
+          <img src="/assets/images/Vector (1).svg" (click)="employeeNameSorting()" alt="" />
         </div>
 
         <li>E-mail</li>
@@ -24,11 +24,16 @@
 
         <div class="employee-sort">
           <li>Employee Code</li>
-          <img src="/assets/images/Vector (1).svg" alt="" />
+          <img src="/assets/images/Vector (1).svg" (click)="employeeCodeSorting()"   alt="" />
         </div>
         <li>Project</li>
       </ul>
     </div>
+    <br>
+    <br>
+    <div class="pagecards-container">
+
+   
 
     <div class="pageCards" *ngFor="let item of usersList">
       <div class="employee">
@@ -46,13 +51,16 @@
       </div>
       <div class="project">
         <p>{{ item.project[0].project }}</p>
-        <p *ngIf="item.project.length - 1 > 0">
-          +{{ item.project.length - 1 }}
+        <p *ngIf="item.project.length - 1 > 0" pTooltip= {{tooltip(item.project)}}  tooltipPosition="bottom">
+          +{{ item.project.length - 1 }} 
         </p>
       </div>
-      <img src="/assets/images/Group 85.svg" alt="" />
+      <div class="edit-btn">
+        <img id="edit-image" src="/assets/images/Group 85.svg" alt="" />
+      </div>
+     
     </div>
-
+  </div>
     <p-paginator
       [rows]="10"
       [totalRecords]="pageSize * totalPages"
