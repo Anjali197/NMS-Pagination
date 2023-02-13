@@ -66,15 +66,15 @@
         margin-bottom: 15px;
         box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
         border-radius: 5px;
-        // gap: 50px;
+        gap: 80px;
         justify-content: space-between;
         align-items: center;
         .employee,
         .mobile,
         .project,
         .employee-code,
-        .email,.edit-btn {
-          width: 700px;
+        .email{
+          width: 800px;
           background-color: #ffffff;
 
         }
@@ -191,5 +191,10 @@ border: #3bbca0;
 .p-paginator .p-paginator-pages .p-paginator-page {
   border-radius: 2px;
   
+}
+.p-button:enabled:active {
+   background:none; 
+  color: #ffffff;
+  border-color: none;
 }
 }

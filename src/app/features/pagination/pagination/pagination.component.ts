@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ApiCallService } from 'src/app/api-call.service';
 import { IProject, IUserDetails } from '../user.type';
 
+
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
@@ -16,10 +17,21 @@ export class PaginationComponent {
   sortOrder = 'desc';
   sortProperty = 'firstName';
 
-  constructor(private getApi: ApiCallService) {}
+ users:IUserDetails[]=[];
+
+  constructor(private getApi: ApiCallService
+    ) {}
+  
 
   ngOnInit(): void {
+   
+    this.getApi.users.subscribe((res)=>{
+      this.users=res.users;
+    this.totalPages=res.totalPage;
+   
+    })
     this.getUsers();
+
   }
 
   getUsers() {
@@ -30,13 +42,17 @@ export class PaginationComponent {
         this.sortOrder,
         this.sortProperty
       )
-      .subscribe((response) => {
-        this.usersList = response.users;
-        this.pageNumber = response.pageNumber;
-        this.totalPages = response.totalPage;
+      .subscribe((res)=>
+        
+               
+          {
+        this.usersList = res.users;
+        this.pageNumber = res.pageNumber;
+        this.totalPages = res.totalPage;
         this.projectList = this.usersList[0].project;
       });
   }
+  
   nextPage() {
     if (this.pageNumber <= this.totalPages) {
       this.getUsers();
@@ -56,8 +72,8 @@ export class PaginationComponent {
     projects.forEach((el) => {
       allProjects.push(el.project);
     });
-    allProjects.splice(0, 1);
-    return allProjects;
+    projects.splice(0, 1);
+    return projects;
   }
   employeeCodeSorting() {
     this.sortProperty = "employeeCode";
@@ -79,4 +95,5 @@ export class PaginationComponent {
     this.getUsers();
 
   }
+  
 }

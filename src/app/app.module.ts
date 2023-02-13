@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {PaginatorModule} from 'primeng/paginator';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TooltipModule } from 'primeng/tooltip';
+import { TitleCasePipe } from '@angular/common';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,11 @@ import { TooltipModule } from 'primeng/tooltip';
     ButtonModule,
     InputTextModule,
     DropdownModule,
-    HttpClientModule,PaginatorModule,BrowserAnimationsModule,TooltipModule
+    HttpClientModule,
+    PaginatorModule,
+    BrowserAnimationsModule,
+    TooltipModule,
+    TitleCasePipe
   ],
   providers: [],
   bootstrap: [AppComponent]

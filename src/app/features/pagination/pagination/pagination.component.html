@@ -49,12 +49,14 @@
       <div class="employee-code">
         <p>{{ item.employeeCode }}</p>
       </div>
-      <div class="project">
-        <p>{{ item.project[0].project }}</p>
+    <div class="project" *ngFor="let project of item.project let i=index" >
+        <p>   {{ project.project }}</p>
         <p *ngIf="item.project.length - 1 > 0" pTooltip= {{tooltip(item.project)}}  tooltipPosition="bottom">
           +{{ item.project.length - 1 }} 
-        </p>
+        </p> 
       </div>
+      
+
       <div class="edit-btn">
         <img id="edit-image" src="/assets/images/Group 85.svg" alt="" />
       </div>
