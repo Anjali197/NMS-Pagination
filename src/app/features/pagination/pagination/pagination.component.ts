@@ -26,11 +26,8 @@ export class PaginationComponent {
       this.totalPages = res.totalPage;
     });
     this.getUsers();
-    console.log("project list",this.projectList);
-    
+    console.log('project list', this.projectList);
   }
-
-
 
   getUsers() {
     this.getApi
@@ -43,9 +40,9 @@ export class PaginationComponent {
       .subscribe((res) => {
         this.usersList = res.users;
         console.log(res);
-        
+
         console.log(this.usersList);
-        
+
         // this.pageNumber = res.pageNumber;
         this.totalPages = res.totalPage;
         this.projectList = this.usersList[0].project;
@@ -75,14 +72,14 @@ export class PaginationComponent {
   //   return projects;
   // }
 
-  displayTooltip(projects:IProject[]){
-   const projectNames:string[]=[]
-   projects.forEach(project=>{
-     projectNames.push(project.project)
-    })
-    const name= projectNames.slice(1);
-    let newName = name.join(' , ')
-   return newName
+  displayTooltip(projects: IProject[]) {
+    const projectNames: string[] = [];
+    projects.forEach((project) => {
+      projectNames.push(project.project);
+    });
+    const name = projectNames.slice(1);
+    let newName = name.join(' , ');
+    return newName;
   }
 
   employeeCodeSorting() {
@@ -102,8 +99,8 @@ export class PaginationComponent {
     // this.getUsers();
   }
   employeeNameSorting() {
-    this.pageNumber=0;
-    this.pageSize=10;
+    this.pageNumber = 0;
+    this.pageSize = 10;
     this.sortProperty = 'firstName';
     this.sortOrder == 'desc'
       ? (this.sortOrder = 'asc')

@@ -3,8 +3,9 @@
   // overflow: hidden;
   .pagination {
     .dropdownsHeader {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 544px 201px 170px 184px 242px 150px; ;
+      // justify-content: space-between;
       gap: 10px;
 
       .dropdowns{
@@ -19,6 +20,15 @@
         }
           
         }
+      }
+      .manager{
+        width: 250px;
+      }
+      .current{
+        width: 200px;
+      }
+      .projects{
+        width: 200px;
       }
 
 
@@ -36,35 +46,37 @@
 
     .headingList {
       ul {
-        display: flex;
+        display: grid;
+        grid-template-columns: 228px 219px 170px 176px 150px ;
         list-style: none;
-        justify-content: space-between;
+        // justify-content: space-between;
         gap: 100px;
         padding: 40px 127px 0px 20px;
         font-size: 18px;
         color: #878787;
         font-weight: 700;
         font-family: "roboto", sans-serif;
+        align-content: left;
 
        .email-heading  {
-          width: 700px;
+          width: 500px;
          
         }
         .employee-sort{
           display: flex;
           gap: 10px;
-          width: 1300px;
+          width: 1020px;
         }
         .mobile-heading{
-          width: 700px;
+          width: 500px;
         }
         .employeecode-sort{
           display: flex;
           gap: 10px;
-          width: 1300px;
+          width: 550px;
         }
         .proect-heading{
-          width: 700px;
+          width: 500px;
         }
 
       }
@@ -125,7 +137,7 @@
            font-family: "railway",sans-serif;
         }
         .mobile,
-        .project,
+        .proect,
         .employee-code,
         .email{
           font-size: 16px;
@@ -146,7 +158,7 @@
 ::ng-deep {
   .p-input-icon-left > .p-inputtext {
     padding-left: 2.5rem;
-    width: 327px;
+    width: 450px;
     height: 36px;
     border-radius: 5px;
     background: #ffffff;
@@ -174,6 +186,7 @@
     font-family: "roboto", sans-serif;
     color: #606060;
     text-overflow: none;
+    font-weight: 500;
 
   }
 
