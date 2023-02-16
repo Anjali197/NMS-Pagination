@@ -25,11 +25,15 @@
             alt=""
           />
         </div>
-
+<div class="email-heading">
         <li>E-mail</li>
+      </div>
+      <div class="mobile-heading">
         <li>Mobile No</li>
+      </div>
+       
 
-        <div class="employee-sort">
+        <div class="employeecode-sort">
           <li>Employee Code</li>
           <img
             src="/assets/images/Vector (1).svg"
@@ -37,7 +41,10 @@
             alt=""
           />
         </div>
-        <li>Project</li>
+        <div class="proect-heading">
+          <li>Project</li>
+        </div>
+        
       </ul>
     </div>
     <br />
@@ -57,16 +64,16 @@
         <div class="employee-code">
           <p>{{ item.employeeCode }}</p>
         </div>
-
+<div class="proect">
         <div
-          class="project"
+          
           *ngFor="let project of item.project; let i = index"
         >
         <div class="project-tooltip">
 
       
         <div class="first-projectname">
-          <p *ngIf="i == 0">{{ project.project }}  </p>
+          <p *ngIf="i == 0">{{ project.project | titlecase }}  </p>
         </div>
           
           <!-- <p  *ngIf="item.project.length > 1"
@@ -88,7 +95,13 @@
         </div>
           
           <p *ngIf="item.project.length==0">Not Assigned</p>
+          
         </div>
+      </div>
+        <!-- <div class="edit-btn"> -->
+          <img  src="/assets/images/Group 85.svg" alt="" />
+      
+        <!-- </div> -->
 
         <!-- <div
         class="project">
@@ -102,10 +115,9 @@
         </p>
       </div> -->
 
-        <div class="edit-btn">
-          <img id="edit-image" src="/assets/images/Group 85.svg" alt="" />
-        </div>
+       
       </div>
+      
     </div>
     <p-paginator
       [rows]="10"

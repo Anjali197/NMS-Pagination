@@ -39,15 +39,34 @@
         display: flex;
         list-style: none;
         justify-content: space-between;
+        gap: 100px;
         padding: 40px 127px 0px 20px;
         font-size: 18px;
         color: #878787;
         font-weight: 700;
         font-family: "roboto", sans-serif;
 
-        .employee-sort {
-          display: flex;
+       .email-heading  {
+          width: 700px;
+         
         }
+        .employee-sort{
+          display: flex;
+          gap: 10px;
+          width: 1300px;
+        }
+        .mobile-heading{
+          width: 700px;
+        }
+        .employeecode-sort{
+          display: flex;
+          gap: 10px;
+          width: 1300px;
+        }
+        .proect-heading{
+          width: 700px;
+        }
+
       }
     }
     .pagecards-container {
@@ -59,61 +78,47 @@
 
       .pageCards {
         display: flex;
-        // justify-content: space-between;
+        // grid-template-columns: 150px 200px 150px 150px 150px 150px;
+        align-content: left;
+        justify-content: space-between;
         background-color: #ffffff !important;
         padding: 20px;
         height: 80px;
         margin-bottom: 15px;
         box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
         border-radius: 5px;
-        gap: 80px;
-        justify-content: space-between;
+        // gap: 80px;
+        // justify-content: space-between;
         align-items: center;
         
-      
-        .email{
-          width: 200px;
-          background-color: #ffffff;
-          text-overflow: ellipsis;
-
-        }
         .employee{
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          width:260px;
+        }
+        .email{
+          width: 250px;
+        }
+        .mobile,
+        .proect,
+        .employee-code
+         {
           width: 200px;
         }
-        .project{
-          width: 200px;
+        .project-tooltip{
+          display: flex;
+          gap: 10px;
         }
-        .employee-code{
-          width: 200px;
-        }
+      
+        
 
 
 
         p {
           cursor: pointer;
         }
-        .employee {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-        }
-        .project {
-          display: flex;
-          // gap: 10px;
         
-        }
-        .project-tooltip{
-
-          display: flex;
-          gap: 10px;
-          width: 200px;
-        }
-        // .first-projectname{
-        //   width: 200px;
-        // }
-        #edit-image {
-          // width: 20px;
-        }
         .employee{
            font-size: 16px;
            font-weight: 700;
