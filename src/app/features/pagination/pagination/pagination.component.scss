@@ -1,10 +1,13 @@
 .mainContainer {
+  // background-color: blue ;
+  width: 100%;
+  height: 100%;
   padding: 36px 15px;
   // overflow: hidden;
   .pagination {
     .dropdownsHeader {
       display: grid;
-      grid-template-columns: 544px 201px 170px 184px 242px 150px; ;
+      grid-template-columns: 544px 201px 170px 184px 242px 150px; 
       // justify-content: space-between;
       gap: 10px;
 
@@ -46,8 +49,8 @@
 
     .headingList {
       ul {
-        display: grid;
-        grid-template-columns: 228px 219px 170px 176px 150px ;
+        display: flex;
+        // grid-template-columns: 228px 219px 170px 176px 150px ;
         list-style: none;
         // justify-content: space-between;
         gap: 100px;
@@ -84,7 +87,7 @@
     .pagecards-container {
       overflow: auto;
       height: 570px;
-      width: 101%;
+      width: 100%;
 
 
       .pageCards {
