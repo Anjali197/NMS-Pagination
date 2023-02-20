@@ -65,6 +65,7 @@
           <p>{{ item.employeeCode }}</p>
         </div>
 <div class="proect">
+        <p *ngIf="item.project.length==0">Not Assigned</p>
         <div
           
           *ngFor="let project of item.project; let i = index"
@@ -73,6 +74,7 @@
 
       
         <div class="first-projectname">
+          
           <p *ngIf="i == 0">{{ project.project | titlecase }}  </p>
         </div>
           
@@ -94,7 +96,7 @@
           </div>
         </div>
           
-          <p *ngIf="item.project.length==0">Not Assigned</p>
+         
           
         </div>
       </div>
